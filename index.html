@@ -1,0 +1,997 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Mejorando.la - CURSO DE DISEÑO WEB</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="list">
+
+	<header class="caption">
+		<h1>CURSO DE DISEÑO WEB</h1>
+		<p><a href="#">Jeremy Morrell</a></p>
+	</header>
+
+	<section class="slide" id="Cover"><div>
+    <div class="mejorandola">
+      <div id="bordeeverde">
+        <div id="parteblanca">
+          <div id="trianguloverdegrande">
+            <div id="trianguloverdepequeno">
+              <div id="partedelaflechitaverde">
+                <div class="franjablancaarriba">
+                </div>
+                <div id="parteflechitablanca">
+                </div>
+                <div class="franjablancaabajo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Vamos a hablar de:</h2>
+    <ul>
+      <li>Animaciones en CSS</li>
+      <li>AJAX y APIs</li>
+      <li>Geolocalización</li>
+    </ul>
+	</div></section>
+
+  <section class="slide"><div>
+		<h2>Cambiando el tamaño en hover</h2>
+
+    <div class="slide1-box"></div>
+
+    <pre>
+      <code>.box {</code>
+      <code>  background-color: red;</code>
+      <code>  width: 150px;</code>
+      <code>  height: 150px;</code>
+      <code>}</code>
+      <code></code>
+      <code>.box:hover {</code>
+      <code>  width: 200px;</code>
+      <code>  height: 200px;</code>
+      <code>  background-color: green</code>
+      <code>}</code>
+    </pre>
+
+    <style>
+      .slide1-box {
+        float: right;
+        background-color: red;
+        width: 150px;
+        height: 150px;
+      }
+
+      .slide1-box:hover {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Cambiando el tamaño con animación</h2>
+
+    <div class="slide2-box"></div>
+
+    <pre>
+      <code>.box {</code>
+      <code>  background-color: red;</code>
+      <code>  width: 150px;</code>
+      <code>  height: 150px;</code>
+      <code>  <mark class="important">transition-property: all;</mark></code>
+      <code>  <mark class="important">transition-duration: 0.5s;</mark></code>
+      <code>  <mark class="important">transition-timing-function: linear;</mark></code>
+      <code>}</code>
+      <code></code>
+      <code>.box:hover {</code>
+      <code>  width: 200px;</code>
+      <code>  height: 200px;</code>
+      <code>  background-color: green</code>
+      <code>}</code>
+    </pre>
+
+    <style>
+      .slide2-box {
+        float: right;
+        background-color: red;
+        width: 150px;
+        height: 150px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.5s;
+        -webkit-transition-timing-function: linear;
+
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+      }
+
+      .slide2-box:hover {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+	</div></section>
+
+  <section class="slide"><div>
+		<h2>Cambiando el tamaño con animación</h2>
+
+    <div class="slide3-box"></div>
+
+    <pre>
+      <code>.box {</code>
+      <code>  background-color: red;</code>
+      <code>  width: 150px;</code>
+      <code>  height: 150px;</code>
+      <code>  transition-property: <mark class="important">width, height,</mark></code>
+      <code>                       <mark class="important">background-color;</mark></code>
+      <code>  transition-duration: <mark class="important">0.5s, 0.5s, 2s;</mark></code>
+      <code>  transition-timing-function: linear;</code>
+      <code>}</code>
+      <code></code>
+      <code>.box:hover {</code>
+      <code>  width: 200px;</code>
+      <code>  height: 200px;</code>
+      <code>  background-color: green</code>
+      <code>}</code>
+    </pre>
+
+    <style>
+      .slide3-box {
+        float: right;
+        background-color: red;
+        width: 150px;
+        height: 150px;
+        -webkit-transition-property: width, height, background-color;
+        -webkit-transition-duration: 0.5s, 0.5s, 2s;
+        -webkit-transition-timing-function: linear;
+
+        transition-property: width, height, background-color;
+        transition-duration: 0.5s, 0.5s, 2s;
+        transition-timing-function: linear;
+      }
+
+      .slide3-box:hover {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+	</div></section>
+
+
+  <section class="slide"><div>
+		<h2>Cambiando el tamaño con animación</h2>
+
+    <div class="slide4-box"></div>
+
+    <pre>
+      <code>.box {</code>
+      <code>  background-color: red;</code>
+      <code>  width: 150px;</code>
+      <code>  height: 150px;</code>
+      <code>  <mark class="important">transition: </code>
+      <code>    <mark class="important">width 0.5s ease,</mark></code>
+      <code>    <mark class="important">height 0.5s linear,</mark></code>
+      <code>    <mark class="important">background-color 3s steps(3, end);</mark></code>
+      <code>}</code>
+      <code></code>
+      <code>.box:hover {</code>
+      <code>  width: 200px;</code>
+      <code>  height: 200px;</code>
+      <code>  background-color: green</code>
+      <code>}</code>
+    </pre>
+
+    <style>
+      .slide4-box {
+        float: right;
+        background-color: red;
+        width: 150px;
+        height: 150px;
+        -webkit-transition: 
+          width 0.5s ease, 
+          height 0.5s linear, 
+          background-color 3s steps(3, end);
+
+        transition: 
+          width 0.5s ease, 
+          height 0.5s linear, 
+          background-color 3s steps(3, end);
+      }
+
+      .slide4-box:hover {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+	</div></section>
+
+  <section class="slide"><div>
+		<h2>Cambiando el tamaño con animación</h2>
+
+    <div class="slide5-box"></div>
+
+    <pre>
+      <code>.box {</code>
+      <code>  background-color: red;</code>
+      <code>  width: 150px;</code>
+      <code>  height: 150px;</code>
+      <code>  <mark class="important">transition: all 0.5s ease;</code>
+      <code>}</code>
+      <code></code>
+      <code>.box:hover {</code>
+      <code>  width: 200px;</code>
+      <code>  height: 200px;</code>
+      <code>  background-color: green</code>
+      <code>}</code>
+    </pre>
+
+    <style>
+      .slide5-box {
+        float: right;
+        background-color: red;
+        width: 150px;
+        height: 150px;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+
+      .slide5-box:hover {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+	</div></section>
+
+  <section class="slide slide6"><div>
+		<h2>Funciones Easing</h2>
+
+    <div id="timings_demo" class="shadow hover">
+      <div id="ease" class="test_box"><p>Ease</p></div>
+      <div id="ease-in" class="test_box"><p>Ease<br>In</p></div>
+      <div id="ease-out" class="test_box"><p>Ease<br>Out</p></div>
+      <div id="ease-in-out" class="test_box"><p>Ease<br>In Out</p></div>
+      <div id="linear" class="test_box"><p>Linear</p></div>
+    </div>
+
+    <style>
+      .slide6 pre {
+        float: right;
+      }
+
+      #timings_demo {
+        position:relative;
+        width:600px;
+        height:600px;
+        padding:10px;
+      }
+
+      .test_box {
+        font-size:18px;
+        position:relative;
+        width:80px;
+        height:80px;
+        margin-bottom:10px;
+        background-color:#eee;
+      }
+
+      .test_box p {
+        margin: 5px;
+      }
+
+      #ease.test_box {
+        -webkit-transition: all 4s ease;
+        -moz-transition: all 4s ease;
+        -o-transition: all 4s ease;
+        transition: all 4s ease;    
+        border:2px #f00 solid;
+      }
+      #ease-in.test_box {
+        -webkit-transition: all 4s ease-in;
+        -moz-transition: all 4s ease-in;
+        -o-transition: all 4s ease-in;
+        transition: all 4s ease-in;    
+        border:2px #0f0 solid;
+      }
+      #ease-out.test_box {
+        -webkit-transition: all 4s ease-out;
+        -moz-transition: all 4s ease-out;
+        -o-transition: all 4s ease-out;
+        transition: all 4s ease-out;    
+        border:2px #00f solid;
+      }
+      #ease-in-out.test_box {
+        -webkit-transition: all 4s ease-in-out;
+        -moz-transition: all 4s ease-in-out;
+        -o-transition: all 4s ease-in-out;
+        transition: all 4s ease-in-out;    
+        border:2px #ff0 solid;
+      }
+      #linear.test_box {
+        -webkit-transition: all 4s linear;
+        -moz-transition: all 4s linear;
+        -o-transition: all 4s linear;
+        transition: all 4s linear;    
+        border:2px #f0f solid;
+      }
+      #custom.test_box {
+        -webkit-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+        -moz-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+        -o-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+        transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);    
+        border:2px #0ff solid;
+      }
+      #negative.test_box {
+        -webkit-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+        -moz-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+        -o-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+        transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);    
+        border:2px #000 dotted;
+      }
+      #timings_demo:hover .test_box, #timings_demo.hover_effect .test_box {
+        margin-left:550px;
+      }
+    </style>
+	</div></section>
+
+<section class="slide slide7"><div>
+		<h2>Agregar una demora</h2>
+
+    <div id="timings_demo_2" class="shadow hover">
+      <div id="t0s" class="box"><p>0s</p></div>
+      <div id="t1s" class="box"><p>1s</p></div>
+      <div id="t2s" class="box"><p>2s</p></div>
+      <div id="t3s" class="box"><p>3s</p></div>
+    </div>
+
+    <pre>
+      <code>transition: all 0.5s ease <mark class="important">2s</mark>;</code>
+      <code>transition-delay: <mark class="important">2s</mark>;</code>
+    </pre>
+
+    <style>
+
+      #timings_demo_2 {
+        position:relative;
+        width:600px;
+        height: 360px;
+        padding:10px;
+      }
+
+      .slide7 .box {
+        background-color: red;
+        color: white;
+        width:60px;
+        height:60px;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      #t0s.box {
+        -webkit-transition: all 2s ease 0s;
+        -moz-transition: all 2s ease 0s;
+        -o-transition: all 2s ease 0s;
+        transition: all 2s ease 0s;    
+        border:2px #f00 solid 0s;
+      }
+
+      #t1s.box {
+        -webkit-transition: all 2s ease 1s;
+        -moz-transition: all 2s ease 1s;
+        -o-transition: all 2s ease 1s;
+        transition: all 2s ease 1s;    
+        border:2px #f00 solid 1s;
+      }
+      #t2s.box {
+        -webkit-transition: all 2s ease 2s;
+        -moz-transition: all 2s ease 2s;
+        -o-transition: all 2s ease 2s;
+        transition: all 2s ease 2s;    
+        border:2px #f00 solid 2s;
+      }
+      #t3s.box {
+        -webkit-transition: all 2s ease 3s;
+        -moz-transition: all 2s ease 3s;
+        -o-transition: all 2s ease 3s;
+        transition: all 2s ease 3s;    
+        border:2px #f00 solid 3s;
+      }
+      #t4s.box {
+        -webkit-transition: all 2s ease 4s;
+        -moz-transition: all 2s ease 4s;
+        -o-transition: all 2s ease 4s;
+        transition: all 2s ease 4s;    
+        border:2px #f00 solid 4s;
+      }
+
+      #timings_demo_2:hover .box, #timings_demo_2.hover_effect .box {
+        margin-left:550px;
+      }
+    </style>
+	</div></section>
+
+
+
+	<section class="slide slide8"><div>
+		<h2>Transformaciones 2D</h2>
+
+    <div>
+      <div class="box" id="skew">skew</div>
+      <div class="box" id="scale">scale</div>
+      <div class="box" id="rotate">rotate</div>
+      <div class="box" id="translate">translate</div>
+      <div class="box" id="rotate-skew-scale-translate">complicado</div>
+    </div>
+
+    <pre>
+      <code>#skew { transform:skew(35deg); }</code>
+      <code>#scale { transform:scale(1,0.5); }</code>
+      <code>#rotate { transform:rotate(45deg); }</code>
+      <code>#translate { transform:translate(10px, 20px); }</code>
+      <code>#rotate-skew-scale-translate {</code>
+      <code>  transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);</code>
+      <code>}</code>
+    </pre>
+
+
+    <style>
+
+      .slide8 .box {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        margin-right: 30px;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      .slide8 pre {
+        margin-top: 50px;
+      }
+
+      #skew {
+        -webkit-transform:skew(35deg);
+        transform:skew(35deg);
+      }
+      #scale {
+        -webkit-transform:scale(1,0.5);
+        transform:scale(1,0.5);
+      }
+      #rotate {
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg);
+      }
+      #translate {
+        -webkit-transform:translate(10px, 20px);
+        transform:translate(10px, 20px);
+      }
+      #rotate-skew-scale-translate {
+        -webkit-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
+        transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
+      }
+    </style>
+  </div></section>
+
+	<section class="slide slide9"><div>
+		<h2>Transformaciones 2D con animaciones</h2>
+
+    <div class="mejorandola">
+      <div id="bordeeverde">
+        <div id="parteblanca">
+          <div id="trianguloverdegrande">
+            <div id="trianguloverdepequeno">
+              <div id="partedelaflechitaverde">
+                <div class="franjablancaarriba">
+                </div>
+                <div id="parteflechitablanca">
+                </div>
+                <div class="franjablancaabajo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <pre>
+      <code>.mejorandola {</code>
+      <code>  transition: all 2s ease-in-out;</code>
+      <code>}</code>
+      <code></code>
+      <code>.mejorandola:hover {</code>
+      <code>  transform:rotate(720deg) scale(3,3);</code>
+      <code>}</code>
+    </pre>
+
+
+    <style>
+
+      .slide9 .mejorandola {
+        float: right;
+      }
+
+      .slide9 .mejorandola {
+        -webkit-transition: all 2s ease-in-out;
+        -moz-transition: all 2s ease-in-out;
+        -ms-transition: all 2s ease-in-out;
+        transition: all 2s ease-in-out;
+      }
+
+      .slide9 .mejorandola:hover {
+        -webkit-transform:rotate(720deg) scale(2,2);
+        -moz-transform:rotate(720deg) scale(2,2);
+        -ms-transform:rotate(720deg) scale(2,2);
+        transform:rotate(720deg) scale(2,2);
+      }
+    </style>
+  </div></section>
+
+  <section class="slide slide10"><div>
+		<h2>Transformaciones 3D</h2>
+
+    <div id="transDemo4">
+      <div id="rotateX">rotateX</div>
+      <div id="rotateY">rotateY</div>
+      <div id="rotateZ">rotateZ</div>
+      <div id="todos">todos</div>
+      <div class="clear"></div>
+    </div>
+
+    <pre>
+      <code>#container div {</code>
+      <code>  transition:all 2s ease-in-out;</code>
+      <code>}</code>
+      <code>#container:hover #rotateX { <mark class="important">transform:rotateX(180deg)</mark>; }</code>
+      <code>#container:hover #rotateY { <mark class="important">transform:rotateY(180deg)</mark>; }</code>
+      <code>#container:hover #rotateZ { <mark class="important">transform:rotateZ(180deg)</mark>; }</code>
+      <code>#container:hover #todos { </code>
+      <code>  transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);</code>
+      <code>}</code>
+    </pre>
+
+
+    <style>
+      .slide10 pre {
+      }
+
+      #transDemo4 {
+      }
+
+      #transDemo4 div:not(.clear) {
+        -webkit-transition:all 2s ease-in-out;
+        -moz-transition:all 2s ease-in-out;
+        -ms-transition:all 2s ease-in-out;
+        transition:all 2s ease-in-out;
+
+        width:70px;
+        height:130px;
+        margin:10px 20px;
+        padding:10px;
+        border:1px blue solid;
+        display: inline-block;
+      }
+
+      #transDemo4:hover #rotateX, #transDemo4.hover_effect #rotateX {
+        -webkit-transform:rotateX(180deg);
+        -moz-transform:rotateX(180deg);
+        -ms-transform:rotateX(180deg);
+        transform:rotateX(180deg);
+      }
+      #transDemo4:hover #rotateY, #transDemo4.hover_effect #rotateY {
+        -webkit-transform:rotateY(180deg);
+        -moz-transform:rotateY(180deg);
+        -ms-transform:rotateY(180deg);
+        transform:rotateY(180deg);
+      }
+      #transDemo4:hover #rotateZ, #transDemo4.hover_effect #rotateZ {
+        -webkit-transform:rotateZ(180deg);
+        -moz-transform:rotateZ(180deg);
+        -ms-transform:rotateZ(180deg);
+        transform:rotateZ(180deg);
+      }
+      #transDemo4:hover #todos, #transDemo4.hover_effect #todos {
+        -webkit-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+        -moz-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+        -ms-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+        transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+      }
+    </style>
+  </div></section>
+
+
+  <section class="slide slide3d"><div>
+		<h2>Transformaciones 3D con animaciones</h2>
+
+    <div class="mejorandola">
+      <div id="bordeeverde">
+        <div id="parteblanca">
+          <div id="trianguloverdegrande">
+            <div id="trianguloverdepequeno">
+              <div id="partedelaflechitaverde">
+                <div class="franjablancaarriba">
+                </div>
+                <div id="parteflechitablanca">
+                </div>
+                <div class="franjablancaabajo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <pre>
+      <code>.mejorandola {</code>
+      <code>  transition: all 2s ease-in-out;</code>
+      <code>}</code>
+      <code></code>
+      <code>.mejorandola:hover {</code>
+      <code>  transform: </code>
+      <code>    rotateX(145deg) </code>
+      <code>    rotateY(180deg) </code>
+      <code>    translateZ(100px);</code>
+      <code>}</code>
+    </pre>
+
+
+    <style>
+      .slide3d .mejorandola {
+        float: right;
+      }
+
+      .slide3d .mejorandola {
+        -webkit-transition: all 2s ease-in-out;
+        -moz-transition: all 2s ease-in-out;
+        -ms-transition: all 2s ease-in-out;
+        transition: all 2s ease-in-out;
+      }
+
+      .slide3d .mejorandola:hover {
+        -webkit-transform: rotateX(145deg) rotateY( 180deg ) translateZ( 100px );
+        transform: rotateX(145deg) rotateY( 180deg ) translateZ( 100px );
+      }
+    </style>
+  </div></section>
+
+  <section class="slide"><div>
+		<h2>Compatibilidad con los navegadores</h2>
+
+    <ul>
+      <li>Todo eso funciona en todos los navegadores "modernos"</li>
+      <li>Transiciones, animaciones, tranformaciones en 3D no funcionan en IE9 :(</li>
+    </ul>  
+
+    <h2>Soluciones</h2>
+    <ul>
+      <li>Usar Modernizr para detectar si el navegador puede user estes atributos
+          y usar $.animate si no...</li>
+      <li>"Degrade gracefully". Los usarios de IE9 simplemente no van a ver estes efectos visuales.</li>
+    </ul>  
+	</div></section>
+
+  <!-- 
+  <section class="slide"><div>
+		<h2>Con Gran Poder...</h2>
+
+    <span><strong>Animaciones pueden ser fantasticas.</strong></span>
+    <ul>
+      <li>Pueden guiar el ojo del usuario para que las acciones de la interfaz son más faciles de seguir. <a target="_blank" href="https://shop.stripe.com/">Ejemplo</a></li>
+      <li>Pueden llamar la atención del usario a eventos importantes</li>
+      <li>Hacen que tu pagina siente mas responsiva y rapida</li>
+      <li>Puden agregar personalidad a una pagina</li>
+    </ul>  
+
+    <h2>Pero...</h2>
+    <span>Es facíl usar demasiadas. No debes distraer tus usuarios ni hacerles esperar.</span>
+	</div></section>
+  -->
+
+  <section class="slide"><div>
+		<h2>Recursos</h2>
+
+    <ul>
+      <li><a href="http://caniuse.com/#feat=css-animation">caniuse.com</a></li>
+      <li><a href="http://daneden.me/animate/">animate.css</a>
+      <li><a href="http://h5bp.github.io/Effeckt.css/dist/">effeckt.css</a>
+      <li><a href="http://lab.hakim.se/">Hakim El Hattab</a></li>
+      <li><a href="http://tympanus.net/codrops/">codrops</a></li>
+      <li><a href="http://codepen.io/">codepen.io</a></li>
+    </ul>  
+
+	</div></section>
+
+  <section class="slide shout"><div>
+    <h2>AJAX</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Historia</h2>
+
+    <ul>
+      <li>HTML originalmente fue designado para documentos</li>
+      <li>Netscape (Mozilla) agregó JavaScript</li>
+      <li>Podíamos modificar el DOM pero no había manera de hablar con la red</li>
+    </ul>  
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Primera solución: iframes</h2>
+
+    <pre>
+      <code>var testFrame = document.createElement("iframe");</code>
+      <code>testFrame.id = "testFrame";</code>
+      <code>testFrame.src = "https://mejorando.la";</code>
+      <code>document.body.appendChild(testFrame);</code>
+    </pre>
+   
+    <iframe src="https://mejorando.la" name="iframe-example" width="800" height="300">
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+	</div></section>
+
+  <section class="slide"><div>
+		<h2>Historia</h2>
+
+    <ul>
+      <li>Microsoft quería hacer una aplicación para Outlook dentro del navegador. 
+          Hicieron una interfaz llamada IXMLHTTPRequest en ActiveX <strong>en IE5</strong></li>
+      <li>Mozilla implementó su propría versión nativamente en el navegador, seguiendo el ejemplo de Microsoft</li>
+      <li>XMLHttpRequest fue copiado por todos los navegadores y se hizo un estandard "de-facto"</li>
+      <ul>
+        <li>Mozilla in 2002</li>
+        <li>Safari 2004</li>
+        <li>Opera 2005</li>
+        <li>Microsoft (IE7) 2006</li>
+      </ul>
+    </ul>
+	</div></section>
+
+  <section class="slide http"><div>
+		<h2>HTTP</h2>
+
+
+    <pre>
+      <code>GET / HTTP/1.1</code>
+      <code>User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0) libcurl/7.24.0 OpenSSL/0.9.8x zlib/1.2.5</code>
+      <code>Host: google.com</code>
+      <code>Accept: */*</code>
+    </pre>
+
+    <pre>
+      <code>HTTP/1.1 301 Moved Permanently</code>
+      <code>Location: http://www.google.com/</code>
+      <code>Content-Type: text/html; charset=UTF-8</code>
+      <code>Date: Thu, 08 Aug 2013 04:31:23 GMT</code>
+      <code>Expires: Sat, 07 Sep 2013 04:31:23 GMT</code>
+      <code>Cache-Control: public, max-age=2592000</code>
+      <code>Server: gws</code>
+      <code>Content-Length: 219</code>
+      <code>X-XSS-Protection: 1; mode=block</code>
+      <code>X-Frame-Options: SAMEORIGIN</code>
+      <code> </code>
+      <code>/* Datos */</code>
+    </pre>
+
+
+    <style>
+      .http pre code {
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+    </style>
+  </div></section>
+
+  <section class="slide http"><div>
+		<h2>Verbos HTTP</h2>
+
+    <ul>
+      <li><strong>GET</strong> - Dame los datos que estoy pidiendo</li>
+      <li><strong>POST</strong> - Guarda estes datos</li>
+      <li>PUT, PATCH - Estes datos han cambiando</li>
+      <li>DELETE - Esos datos de ayer? Ya no los necesito</li>
+    </ul>
+
+    <ul>
+      <li>GET</li>
+      <ul>
+        <li>Quiero los resultados de ésta búsqueda con éstos parámetros</li>
+        <li>Quiero ésta imagen</li>
+      </ul>
+      <li>POST</li>
+      <ul>
+        <li>Registrando un usuario</li>
+        <li>Subiendo una imagen</li>
+      </ul>
+    </ul>
+
+  </div></section>
+
+  <section class="slide http-return-codes"><div>
+    <h2><a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP Return Codes</a></h2>
+
+    <span><strong>2xx Éxito</strong></span>
+    <ul>
+      <li>200 OK</li>
+      <li>201 Created</li>
+    </ul>
+
+    <span><strong>3xx Redirección</strong></span>
+    <ul>
+      <li>300 Moved Permanently</li>
+      <li>304 Not Modified</li>
+    </ul>
+
+    <span><strong>4xx Redirección</strong></span>
+    <ul>
+      <li>400 Bad Request</li>
+      <li>401 Unauthorized</li>
+      <li>404 Not Found</li>
+    </ul>
+    <span><strong>5xx Error del Servidor</strong></span>
+
+    <style>
+      .http-return-codes ul {
+        margin-bottom: 6px;
+      }
+    </style>
+  </div></section>
+
+  <section class="slide cors"><div>
+		<h2>Query Parameters</h2>
+
+    <pre>
+      <code>http://ws.geonames.org/countryCode<mark class="important">?lat=49.03&lng=10.2&type=JSON</mark></code>
+    </pre>
+
+    <pre>
+      <code>http://www.youtube.com/results<mark class="important">?search_query=mejorandola</mark></code>
+    </pre>
+
+    <pre>
+      <code>http://dominos.com/pizza<mark class="important">?tamano=grande&domicilio=true&sabor=pepperoni</mark></code>
+    </pre>
+
+    <pre>
+      <code>$.get('http://dominos.com/pizza', {</code>
+      <code>  tamano: 'grande',</code>
+      <code>  sabor: 'pepperoni',</code>
+      <code>  domicilio: true</code>
+      <code>}, callback);</code>
+    </pre>
+    
+  </div></section>
+
+  <section class="slide"><div>
+		<h2>Same-Origin Policy</h2>
+
+    <p>Los navegadores no permitan javascript hacer cualquiera pedido. Sólo puedes hacer
+       un pedido al mismo dominio.</p>
+
+    <p>Si tu pagina es: http://example.com/index.html. Sólo puedes hacer pedidos a urls en este mísmo dominio.</p>
+
+    <ul>
+      <p><strong>JSONP</strong> - Un hack grande</p>
+      <p><strong>CORS</strong> - La solución mejor</p>
+    </ul>
+  </div></section>
+    
+  <section class="slide cors"><div>
+		<h2>CORS</h2>
+
+    <pre>http://ws.geonames.org/countryCode?lat=49.03&lng=10.2&type=JSON</pre>
+    <button type="submit">Fetch</button>
+
+    <p class="output"></p>
+
+    <pre>
+      <code>Access-Control-Allow-Origin:*</code>
+    </pre>
+
+  </div></section>	
+    
+  <!-- Geolocalization -->
+
+  <section class="slide geolocal"><div>
+		<h2>Geolocalización</h2>
+
+    <pre>
+      <code>navigator.geolocation.getCurrentPosition(function (position) {</code>
+      <code>  var latitude = position.coords.latitude;</code>
+      <code>  var longitude = position.coords.longitude;</code>
+      <code>  alert('Latitude: ' + latitude + ', ' + Longitude: ' + longitude);</code>
+      <code>});</code>
+    </pre>
+
+    <button type="submit">Hazlo!</button>
+  </div></section>
+
+  <section class="slide geo"><div>
+		<h2>Geolocalización</h2>
+
+    <pre>
+      <code>navigator.geolocation.getCurrentPosition(function (position) {</code>
+      <code>  var latitude = position.coords.latitude;</code>
+      <code>  var longitude = position.coords.longitude;</code>
+      <code></code>
+      <code>  $.get('http://ws.geonames.org/countryCode', {</code>
+      <code>    type: "JSON", </code>
+      <code>    lat: latitude, </code>
+      <code>    lng: longitude</code>
+      <code>  }, function(data) { </code>
+      <code>    alert("Estás en: " + data.countryName);</code>
+      <code>  });</code>
+      <code>});</code>
+    </pre>
+
+    <button type="submit">Hazlo!</button>
+  </div></section>
+
+	<section class="slide" id="details"><div>
+    <h2>Jeremy Morrell</h2>
+    <img src="pictures/jeremy.jpg" alt="profile picture" />
+		<ul>
+			<li><a href="http://twitter.com/jeremymorrell">twitter.com/jeremymorrell</a></li>
+			<li><a href="https://github.com/jmorrell">github.com/jmorrell</a></li>
+			<li><a href="mailto:morrell.jeremy@gmail.com">morrell.jeremy@gmail.com</a></li>
+		</ul>
+	</div></section>
+
+	<script src="shower/shower.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('.cors button').on('click', function() {
+        $.get('http://ws.geonames.org/countryCode', {
+          type: "JSON", lat: 4.70, lng: -74.04
+        }, function(data) { 
+          $('.cors .output').text(JSON.stringify(data, null, '  '));
+        });
+      });
+
+      $('.geolocal button').on('click', function() {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+          alert('Latitude: ' + latitude + ',  + Longitude: ' + longitude);
+         }, function(err) { console.log(err); });
+      });
+
+      $('.geo button').on('click', function() {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          $.get('http://ws.geonames.org/countryCode', {
+            type: "JSON", 
+            lat: latitude, 
+            lng: longitude
+          }, function(data) { 
+            alert("Estás en: " + data.countryName);
+          });
+        }, function(err) { console.log(err); });
+      });
+
+    });
+  </script>
+</body>
+</html>

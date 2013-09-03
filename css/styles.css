@@ -1,0 +1,167 @@
+body {
+    font: 20px/2 "PT Sans",sans-serif;
+}
+
+.slide {
+    background: #fff;
+}
+
+/* Hide the slide numbers */
+.slide:after {
+    display: none;
+}
+
+/* Hide the line numbers for code snippets */
+.slide pre code:before {
+    display: none;
+}
+
+.slide pre code {
+    line-height: 28px;
+    font-size: 18px;
+}
+
+/* Give us an sub-header that fits with the theme */
+.slide h3 {
+    margin: 0 0 17px;
+    color: rgb(87, 87, 87);
+    font: bold 30px/1 "PT Sans Narrow",sans-serif;
+}
+
+/* 
+ * Center an element in the middle of the page. Stolen
+ * shamelessly from the Mozilla slide deck template. 
+ */
+.middle {
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+}
+
+.mono {
+    font-family: "PT Mono",monospace;
+    color: #666;
+}
+
+/* Styles for specific slides */
+
+#details img {
+  zoom: 80%;
+  float: right;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+
+
+
+
+/* mejorando.la logo in CSS */
+#bordeeverde {
+   background: #a8cf45;
+   width: 200px;
+   height: 200px;
+   border-radius: 36px;
+   padding: 24px;
+   margin-top: 80px;
+   margin-left: 45px;
+   -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+}
+#parteblanca {
+   background: #fff;
+   width: 200px;
+   height: 200px;
+   border-radius: 22px;
+}
+#trianguloverdegrande {
+   display: block;
+   position: absolute;
+   margin-left: 48px;
+   margin-top: 93px;
+   -webkit-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   -o-transform: rotate(180deg);
+   border-color: #a8cf45 transparent transparent transparent;
+   border-style: solid;
+   border-width: 54px;
+   width: 0px;
+   height: 0;
+}
+#trianguloverdepequeno {
+   display: block;
+   position: absolute;
+   margin-top: 108px;
+   margin-left: -14px;
+   -webkit-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   -o-transform: rotate(180deg);
+   border-color: #a8cf45 transparent transparent transparent;
+   border-style: solid;
+   border-width: 20px;
+   width: 0;
+   height: 0;
+}
+#partedelaflechitaverde {
+   display: block;
+   position: absolute;
+   -webkit-transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   -o-transform: rotate(180deg);
+   border-color: #a8cf45 transparent transparent transparent;
+   border-style: solid;
+   border-width: 110px;
+   margin-top: -100px;
+   margin-left: -106px;
+   width: 0px;
+   height: 0;
+}
+.franjablancaarriba {
+   display: block;
+   position: absolute;
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   width: 100px;
+   height: 50px;
+   margin-top: -86px;
+   margin-left: 25px;
+   background: #fff;
+}
+.franjablancaabajo {
+   display: block;
+   position: absolute;
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   width: 100px;
+   height: 50px;
+   margin-top: -86px;
+   margin-left: -125px;
+   background: #fff;
+}
+#parteflechitablanca {
+   display: block;
+   position: absolute;
+   border-color: #fff transparent transparent transparent;
+   border-style: solid;
+   border-width: 58px;
+   width: 0px;
+   height: 0;
+   margin-top: -111px;
+   margin-left: -58px;
+}
+.mejorandola {
+   width: 321px;
+   height: auto;
+   margin: 0 auto;
+}
+
