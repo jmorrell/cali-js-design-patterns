@@ -1,5 +1,5 @@
 body {
-    font: 20px/2 "PT Sans",sans-serif;
+    font: 24px/2 "PT Sans",sans-serif;
 }
 
 .slide {
@@ -11,14 +11,23 @@ body {
     display: none;
 }
 
+.slide h2 {
+  font: bold 60px/1 "PT Sans Narrow",sans-serif;
+}
+
 /* Hide the line numbers for code snippets */
 .slide pre code:before {
     display: none;
 }
 
 .slide pre code {
-    line-height: 28px;
-    font-size: 18px;
+  line-height: 35px;
+  font-size: 22px;
+}
+
+.slide.small-code pre code {
+  line-height: 26px;
+  font-size: 15px;
 }
 
 /* Give us an sub-header that fits with the theme */
@@ -48,120 +57,41 @@ body {
     color: #666;
 }
 
+.slide img {
+  max-width: 750px;
+  max-height: 450px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
 /* Styles for specific slides */
 
+#cover h2 {
+  margin-top: 25px;
+  font-size: 59px;
+}
+
+#cover .title-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+#cover img {
+  max-width: 400px;
+}
+
 #details img {
-  zoom: 80%;
   float: right;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
 }
 
-
-
-
-/* mejorando.la logo in CSS */
-#bordeeverde {
-   background: #a8cf45;
-   width: 200px;
-   height: 200px;
-   border-radius: 36px;
-   padding: 24px;
-   margin-top: 80px;
-   margin-left: 45px;
-   -webkit-transform: rotate(45deg);
-   -moz-transform: rotate(45deg);
-   -o-transform: rotate(45deg);
+#twitter ul {
+  max-width: 400px;
 }
-#parteblanca {
-   background: #fff;
-   width: 200px;
-   height: 200px;
-   border-radius: 22px;
-}
-#trianguloverdegrande {
-   display: block;
-   position: absolute;
-   margin-left: 48px;
-   margin-top: 93px;
-   -webkit-transform: rotate(180deg);
-   -moz-transform: rotate(180deg);
-   -o-transform: rotate(180deg);
-   border-color: #a8cf45 transparent transparent transparent;
-   border-style: solid;
-   border-width: 54px;
-   width: 0px;
-   height: 0;
-}
-#trianguloverdepequeno {
-   display: block;
-   position: absolute;
-   margin-top: 108px;
-   margin-left: -14px;
-   -webkit-transform: rotate(180deg);
-   -moz-transform: rotate(180deg);
-   -o-transform: rotate(180deg);
-   border-color: #a8cf45 transparent transparent transparent;
-   border-style: solid;
-   border-width: 20px;
-   width: 0;
-   height: 0;
-}
-#partedelaflechitaverde {
-   display: block;
-   position: absolute;
-   -webkit-transform: rotate(180deg);
-   -moz-transform: rotate(180deg);
-   -o-transform: rotate(180deg);
-   border-color: #a8cf45 transparent transparent transparent;
-   border-style: solid;
-   border-width: 110px;
-   margin-top: -100px;
-   margin-left: -106px;
-   width: 0px;
-   height: 0;
-}
-.franjablancaarriba {
-   display: block;
-   position: absolute;
-   -webkit-transform: rotate(90deg);
-   -moz-transform: rotate(90deg);
-   -o-transform: rotate(90deg);
-   width: 100px;
-   height: 50px;
-   margin-top: -86px;
-   margin-left: 25px;
-   background: #fff;
-}
-.franjablancaabajo {
-   display: block;
-   position: absolute;
-   -webkit-transform: rotate(90deg);
-   -moz-transform: rotate(90deg);
-   -o-transform: rotate(90deg);
-   width: 100px;
-   height: 50px;
-   margin-top: -86px;
-   margin-left: -125px;
-   background: #fff;
-}
-#parteflechitablanca {
-   display: block;
-   position: absolute;
-   border-color: #fff transparent transparent transparent;
-   border-style: solid;
-   border-width: 58px;
-   width: 0px;
-   height: 0;
-   margin-top: -111px;
-   margin-left: -58px;
-}
-.mejorandola {
-   width: 321px;
-   height: auto;
-   margin: 0 auto;
-}
-
